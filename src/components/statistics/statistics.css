@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+.statistics {
+    background-image: url('../../image/static.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    background-attachment: fixed;
+}
+.statistics::before {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    height: 100%;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.statisticsBox {
+    width: 85%;
+    margin:  0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+.statisticName {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    margin-top: 0;
+}
+.kvadrat {
+    border: 5px solid white;
+    padding: 8px 8px;
+    background-color: #333;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+.border {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 2px;
+    background-color: black;
+}
+.statistics-subtitle {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+.statistic-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+}
+.statistic-item {
+    border: 2px solid #004a8d;
+    border-radius: 0 0 45px;
+    padding: 0 20px 20px;
+    border-top: 0;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc((100% - 15px ) / 4);
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.statistic-item::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: #004a8d;
+}
+.statistic-item::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background: #004a8d;
+}
+.statistic-icon {
+    color: #fff;
+    font-size: 45px;
+    position: relative;
+    transform: translateY(-20px);
+}
+.statisticInfo, .counter {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.counter {
+    font-size: 40px;
+    padding-top: 0;
+    margin-bottom: 25px;
+
+}
+@media (max-width: 992px) {
+    .statistic-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .statistic-item {
+        width: 45%;
+        margin-right: 20px;
+    }
+    .statistic-item:nth-child(2) {
+        margin-right: 0;
+    }
+    .statistic-item:nth-child(4) {
+        margin-right: 0;
+    }
+}
+@media (max-width: 600px) {
+    .statisticName {
+        font-size: 35px;
+    }
+    .statistic-item {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+}
+@media (max-width: 400px) {
+    .statisticName {
+        font-size: 30px;
+    }
+    
+}

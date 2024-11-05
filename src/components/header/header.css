@@ -1,0 +1,119 @@
+.header {
+    padding: 10px 0;
+    background: #004A8D;
+    box-sizing: border-box;
+    position: relative;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 85%;
+    margin: 0 auto;
+}
+.headerItem ul {
+    display: flex;
+    align-items: center;
+}
+.headerItem {
+    padding: 0;
+}
+#headerLi {
+    position: relative;
+}
+/* .langItems {
+    position: absolute;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    z-index: 6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    visibility: hidden;
+}
+.langItems.active {
+    visibility: visible;
+} */
+
+.headerNavItem {
+    font-family: sans-serif;
+    margin-right: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 15px;
+}
+.socialItem1, .socialItem2, .socialItem3 {
+    margin-right: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    border: none;
+    
+}
+.socialItems {
+   display: inline-block;
+   vertical-align: middle;
+   /* height: 22px; */
+}
+.socialItem1 {
+    background-color: #3b5998;
+    padding: 5px;
+    color: #fff;
+}
+.socialItem2 {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: #fff;
+    padding: 5px;
+}
+.socialItem3 {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 5px;
+}
+@media (max-width: 891px) {
+    .headerNav {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        
+    }
+    .headerItem ul {
+        margin-bottom: 10px;
+    }
+    .socialItem3 {
+        margin-right: 0;
+    }
+}
+@media (max-width: 832px) {
+    .headerNav {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        
+    }
+    .headerItem ul {
+        margin-bottom: 10px;
+    }
+    .socialItem3 {
+        margin-right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}
+

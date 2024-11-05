@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.navbar {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  width: 100%;
+  background-color: white;
+  
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+.navBox {
+  width: 85%;
+  margin: 0 auto;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.schoolName {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(15, 13, 25);
+}
+.schoolName img {
+  width: 45px;
+  margin-right: 10px;
+}
+.navItems {
+  display: flex;
+  font-size: 20px;
+}
+.navItems li {
+  margin-right: 20px;
+}
+.navItem {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+.navItem a {
+  color: rgb(15, 13, 25);
+  font-family: "Roboto", sans-serif;
+}
+.navItem a:hover {
+  color: #004A8D;
+}
+.mobileNav {
+  display: none;
+}
+.menuIcon {
+  z-index: 4;
+  display: none;
+}
+.mobileNavItems {
+    display: none;
+}
+.Uzb, .Eng {
+  width: 60px;
+}
+.Rus {
+  width: 28px;
+  height: 25px;
+}
+.language {
+  display: flex;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.language1 {
+  cursor: pointer;
+}
+.uzb-language {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.languages1 {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #E4FFE1;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(166 171 189 / 50%);
+}
+.languages1.act-sq1 {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: -4px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+}
+.language-menu {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  list-style-type: none;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.language-menu li {
+  display: flex; 
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0;
+}
+.Uzb1, .Eng {
+  width: 40px; 
+}
+.Uzb-1 {
+  width: 45px;
+}
+
+.Rus {
+  width: 44px;
+}
+
+@media (max-width: 950px) {
+  .navItems {
+    font-size: 18px;
+  }
+}
+@media (max-width: 872px) {
+  .schoolName {
+    font-size: 24px;
+  }
+  .navItems {
+    font-size: 16px;
+  }
+  .navItems li {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .mobileNav.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: white;
+  }
+  .mobile-language {
+    flex-direction: row;
+  }
+  .languages1.act-sq1 {
+    right: -44px;
+    padding-top: 10px;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .navItems {
+    display: none;
+  }
+  .mobileNavItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menuIcon {
+    display: inline-block;
+    cursor: pointer;
+    border:  1px solid #004A8D;
+    padding: 4px 4px;
+    border-radius: 5px;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  .bar1.change {
+    transform: translate(0, 10px) rotate(-45deg);
+  }
+
+  .bar2.change {
+    opacity: 0;
+  }
+
+  .bar3.change {
+    transform: translate(0, -6px) rotate(45deg);
+  }
+  .mobileNavItems li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

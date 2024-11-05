@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+.news {
+    padding: 100px 0;
+}
+.newsBox {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.bounce {
+    padding: 2px 20px;
+    border-radius: 6.25rem;
+    line-height: 1.9375rem;
+    margin-bottom: 0.5rem;
+    animation-name: bounce;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    position: relative;
+    color: white;
+    font-family: 'Lato', 'sans-serif';
+    background-color: #004a8d;
+    z-index: 1;
+    display: inline-block;
+    font-size: 16px;
+}
+.bounce::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0.6875rem;
+    height: 0.6875rem;
+    background-color: #004a8d;
+    -ms-transform: translateY(50%) rotate(45deg);
+    transform: translateY(50%) rotate(45deg);
+    z-index: -1;
+}
+.newsTitle {
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    color: rgb(15, 13, 25);
+    margin-top: 0;
+}
+.kvadrat {
+    border: 5px solid white;
+    padding: 8px 8px;
+    background-color: #333;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+.border {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 2px;
+    background-color: black;
+}
+.newSubtitle {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(15, 13, 25);
+}
+
+.tadbirItem {
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 40px 20px 0 20px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    cursor: pointer;
+}
+.newItem:nth-child(3) {
+    margin-right: 0;
+}
+.tadbirImg {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.tadbirItem img {
+    width: 100%;
+    margin: 0 auto;
+    transition: all ease 0.5s;
+}
+.tadbirItem:hover img {
+    transform: scale(1.2);
+    transition: all ease 0.5s;
+}
+
+.tadbirName {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.solid {
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 2px;
+    background: #004A8D;
+    transition: all ease 0.5s;
+}
+.tadbirName:hover+.solid {
+    width: 75px;
+    height: 3px;
+    transition: all ease 0.5s;
+}
+.date {
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-size: 18px;
+}
+.tadbirInfo {
+    font-size: 18px;
+    color: #847878;
+    font-family: 'Lato', 'sans-serif';
+    margin-bottom: 35px;
+}
+.batafsil {
+    padding: 8px 15px;
+    color: #fff;
+    background-color: #004A8D;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Lato', 'sans-serif';
+    transition: all ease 0.5s;
+}
+.batafsil:hover {
+    padding: 12px 24px;
+    transition: all ease 0.5s;
+    font-size: 18px;
+}
+.swiper {
+    padding: 0 0 100px 0 !important;
+    background-color: #fff !important;
+    
+}
+.swiper-slide {
+    cursor: grab;
+}
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 10px !important;
+    background: #004A8D !important;
+    margin: 0 5px !important;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    
+}
+.swiper-pagination-bullet-active {
+    background: #333 !important;
+    
+    width: 35px !important;
+    border-radius: 30px;
+    display: inline-block;
+    height: 8px;
+    overflow: hidden;
+    text-indent: -999em;
+    position: relative;
+    z-index: 3;
+}
+.newsSwiper {
+    padding-bottom: 50px !important
+}
+@media (max-width: 600px) {
+    .newsTitle {
+        font-size: 35px;
+    }
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}

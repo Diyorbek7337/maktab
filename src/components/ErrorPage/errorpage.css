@@ -1,0 +1,7 @@
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.errorMessage {
+    font-family: sans-serif;
+}

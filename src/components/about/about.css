@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.about {
+    padding: 100px 0;
+    text-align: center;
+}
+.aboutTitle {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 4px;
+    width: 85%;
+    margin: 0 auto;
+}
+.aboutBox {
+    width: 85%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 100px 0 0px 0;
+}
+.aboutBox > div {
+    width: 50%;
+    box-sizing: border-box;
+}
+.school-name {
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(15, 13, 25);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.schoolAbout {
+    font-size: 20px;
+    line-height: 25px;
+    color: #807a7a;
+    font-family: sans-serif;
+    text-align: left;
+}
+.aboutBoxInfo {
+    margin-right: 30px;
+}
+.aboutBoxImg img{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .aboutBox {
+        flex-direction: column;
+    }
+    .aboutBox > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .schoolAbout {
+        text-align: center;
+    }
+    .aboutBoxImg {
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+    .aboutTitle {
+        font-size: 45px;
+    }
+}
+@media (max-width: 600px) {
+    .aboutTitle {
+        font-size: 35px;
+    }
+}

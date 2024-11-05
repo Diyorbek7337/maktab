@@ -1,0 +1,89 @@
+{
+    "lang": "En",
+    "header": {
+        "teacher": "Teachers",
+        "parent": "Parents",
+        "pupil": "Pupils",
+        "language": "Language",
+        "site": "The site is in test mode"
+    },
+    "nav": {
+        "school": "School №1",
+        "main": "Home",
+        "about": "About School",
+        "news": "News",
+        "leader": "Leadership",
+        "contact": "Contact",
+        "teacher": "Teachers"
+    },
+    "about": {
+        "aboutTitle": "About our school",
+        "animateTitle": "School №1"
+    },
+    "statistics": {
+        "statisticsTitle": "School statistics",
+        "statisticsSubtitle": "Main indicator parameters of the school",
+        "statisticsInfo1": "Number of teachers",
+        "statisticsInfo2": "Number of students",
+        "statisticsInfo3": "Number of classes",
+        "statisticsInfo4": "Number of circles"
+    },
+    "leader": {
+        "leaderTitle": "Leadership",
+        "leader": "DIRECTOR",
+        "leader1": "DEPUTY DIRECTOR",
+        "phone": "Telephone:",
+        "qabul": "Reception days:",
+        "kun": "Monday - Friday"
+    },
+    "news": {
+        "newsTitle": "Latest News",
+        "newsSubtitle": "The latest and most interesting news in school life",
+        "newsMore": "More"
+    },
+    "teacher": {
+        "teacherTitle": "Our Teachers",
+        "teacherName": "Axmatqulova Muqaddas Abdibakirovna",
+        "teacherName1": "Usmonova Jamila Mamashukurovna",
+        "teacherName2": "Safarova Gulnora Erkinovna",
+        "teacherName3": "Hakimova Dilorom Jabborovna",
+        "teacherName4": "Jo'rayeva Saydiniso Qodirovna",
+        "teacherName5": "G'afarova Xayri Karayevna",
+        "teacherPosition": "History teacher",
+        "teacherPosition1": "English teacher",
+        "teacherPosition2": "Teacher of elementary education",
+        "teacherPosition3": "Russian language teacher",
+        "teacherSubTitle": "Honorary teachers of our school",
+        "teacherYear": "More than 10 years of experience",
+        "teacherYear1": "More than 25 years of experience",
+        "teacherYear2": "More than 40 years of experience"
+    },
+    "contact": {
+        "contactTitle": "Сontact us",
+        "contactSubTitle": "If you have any questions or suggestions for the school principal, you can send them through the given platform",
+        "name": "Enter your name",
+        "surname": "Enter your surname",
+        "comment": "Enter your questions and suggestions",
+        "send": "Send"
+    },
+    "useful": {
+        "title": "Useful Resources",
+        "subtitle": "Useful resources for teachers and parents",
+        "president": "Official website of the President of the Republic of Uzbekistan",
+        "xalq": "The official site of the Ministry of Public Education of the Republic of Uzbekistan",
+        "portal": "The only interactive public services portal",
+        "malumot": "Open information portal of the Republic of Uzbekistan"
+    },
+    "footer": {
+        "navigate1": "About school",
+        "navigate2": "Navigation",
+        "navigate3": "Contact us",
+        "navigate4": "View from the map",
+        "subtitle": "1st general secondary school under the public education department of Shorchi district, Surkhandarya region",
+        "manzil": "Address",
+        "manziltitle": "Kh. Begmatov street 48, Shorchi district, Surkhandarya region",
+        "email": "Email",
+        "faks": "Fax"
+    }
+    
+}

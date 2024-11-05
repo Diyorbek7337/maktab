@@ -1,0 +1,87 @@
+{
+    "lang": "Uz",
+    "header": {
+        "parent": "Ota-Onalarga",
+        "pupil": "O'quvchilarga",
+        "language": "Til",
+        "site": "Sayt test rejimida ishlamoqda"
+    },
+    "nav": {
+        "school": "1-Maktab",
+        "main": "Bosh Sahifa",
+        "about": "Bizning Maktab",
+        "news": "Yangiliklar",
+        "leader": "Rahbariyat",
+        "contact": "Bog'lanish",
+        "teacher": "O'qituvchilar"
+    },
+    "about": {
+        "aboutTitle": "Bizning maktabimiz haqida",
+        "animateTitle": "1-Maktab"
+    },
+    "statistics": {
+        "statisticsTitle": "Maktab statistikasi",
+        "statisticsSubtitle": "Maktabning asosiy ko'rsatgich parametrlari",
+        "statisticsInfo1": "O'qituvchilar soni",
+        "statisticsInfo2": "O'quvchilar soni",
+        "statisticsInfo3": "Sinflar soni",
+        "statisticsInfo4": "To'garaklar soni"
+    },
+    "leader": {
+        "leaderTitle": "Rahbariyat",
+        "leader": "DIREKTOR",
+        "leader1": "DIREKTOR O'RINBOSARI",
+        "phone": "Telefon:",
+        "qabul": "Qabul kunlari:",
+        "kun": "Dushanba - Juma"
+    },
+    "news": {
+        "newsTitle": "Eng So'nggi Yangiliklar",
+        "newsSubtitle": "Maktab hayotidagi eng so'nggi va qiziqarli yangiliklar",
+        "newsMore": "Batafsil"
+    },
+    "teacher": {
+        "teacherTitle": "Bizning O'qituvchilarimiz",
+        "teacherName": "Axmatqulova Muqaddas Abdibakirovna",
+        "teacherName1": "Usmonova Jamila Mamashukurovna",
+        "teacherName2": "Safarova Gulnora Erkinovna",
+        "teacherName3": "Hakimova Dilorom Jabborovna",
+        "teacherName4": "Jo'rayeva Saydiniso Qodirovna",
+        "teacherName5": "G'afarova Xayri Karayevna",
+        "teacherPosition": "Tarix fani o'qituvchisi",
+        "teacherPosition1": "Ingliz tili fani o'qituvchisi",
+        "teacherPosition2": "Boshlang'ich ta'lim fani o'qituvchisi",
+        "teacherPosition3": "Rus tili fani o'qituvchisi",
+        "teacherSubTitle": "Maktabimiz faxriy o'qituvchilari",
+        "teacherYear": "10 yildan ortiq tajriba",
+        "teacherYear1": "25 yildan ortiq tajriba",
+        "teacherYear2": "40 yildan ortiq tajriba"
+    },
+    "contact": {
+        "contactTitle": "Biz bilan bog'lanish",
+        "contactSubTitle": "Agar sizda maktab direktoriga savollaringiz yoki takliflaringiz bo'lsa keltirilgan platforma orqali yuborishingiz mumkin",
+        "name": "Ismingizni kiriting",
+        "surname": "Familiyangizni kiriting",
+        "comment": "Savol va takliflarizni kiriting",
+        "send": "Jo'natish"
+    },
+    "useful": {
+        "title": "Foydali Manbalar",
+        "subtitle": "O'qituvchilar va Ota-onalar uchun foydali bo'lgan manbalar",
+        "president": "O'zbekiston Respublikasi Prezidentining rasmiy sayti",
+        "xalq": "O'zbekiston Respublikasi Xalq ta'lim vazirligi rasmiy sayti",
+        "portal": "Yagona interaktiv davlat xizmatlari portali",
+        "malumot": "O'zbekiston Respublikasi ochiq ma'lumotlar portali"
+    },
+    "footer": {
+        "navigate1": "Maktab haqida",
+        "navigate2": "Navigatsiya",
+        "navigate3": "Biz bilan Bog'laning",
+        "navigate4": "Xaritadan ko'rish",
+        "subtitle": "Surxondaryo viloyati Sho'rchi tumani xalq ta'limi bo'limiga qarashli 1-umumiy o'rta ta'lim maktabi",
+        "manzil": "Manzil",
+        "manziltitle": "Surxondaryo viloyati Sho'rchi tumani X.Begmatov ko'chasi 48-uy",
+        "email": "Email",
+        "faks": "Faks"
+    }
+}

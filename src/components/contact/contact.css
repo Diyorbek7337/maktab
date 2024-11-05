@@ -1,0 +1,55 @@
+.contact {
+    padding: 100px 0;
+    
+}
+.contactBox {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 80px auto 0 auto;
+}
+.contactItem {
+    outline: none;
+    margin-bottom: 15px;
+    padding: 12.5px 10px;
+    border-radius: 4px;
+    background-color: #f1f1f192;
+    border: 1px solid #797979;
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.textArea {
+    height: 100px;
+}
+.contactItem::placeholder {
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.contactButton {
+    padding: 12.5px 10px;
+    background-color: #004A8D;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .contactContainer {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .contactContainer {
+        width: 100%;
+    }
+}

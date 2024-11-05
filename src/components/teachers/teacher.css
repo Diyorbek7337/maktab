@@ -1,0 +1,55 @@
+.teachers {
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+.teacherBox {
+    width: 85%;
+    margin: 0 auto;
+    padding: 100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.teacherBox .newSubtitle {
+    margin-bottom:100px;
+}
+.teacherItems {
+    box-sizing: border-box;
+}
+.teacherItem {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 40px 0px 0 0;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    cursor: pointer;
+}
+.teacherItem img {
+    width: 90%;
+}
+.leaderItem {
+    cursor: pointer;
+}
+.teacherName {
+    /* font-size: 22px; */
+    font-family: sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.teacherPosition {
+    font-family: 'Lato', 'sans-serif';
+    color: #797979;
+}
+.teacherExperience {
+    font-family: 'Lato', 'sans-serif';
+}
+
+@media (max-width: 500px) {
+    .teacherBox .newsTitle {
+        font-size: 40px;
+    }
+}
