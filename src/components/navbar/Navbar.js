@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import Gerb from "../../image/gerb.png";
+import Logo from "../../image/logo.jpg";
 import { useTranslation } from "react-i18next";
 import Uzb from './../../image/uzb.png'
 import Rus from './../../image/rus3-removebg-preview.png'
@@ -27,7 +27,7 @@ function Navbar({ changeLan }) {
     <div className="navbar">
       <div className="navBox">
         <h1 className="schoolName">
-          <img src={Gerb} alt="Gerb" />
+          <img src={Logo} alt="Logo" />
           3-son Kasb-hunar maktab
         </h1>
         <ul className="navItems">
