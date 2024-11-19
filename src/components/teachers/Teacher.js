@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./teacher.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,6 +16,14 @@ import { useTranslation } from "react-i18next";
 
 function Teacher() {
   const { t } = useTranslation();
+  const [info, setInfo] = useState();
+
+  useEffect(() => {
+    fetch("https://3-maktab-back-production.up.railway.app/teacher")
+      .then((res) => res.json())
+      .then((data) => setInfo(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
   return (
     <div className="teacher" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
       <div className="teacherBox" >
@@ -55,123 +63,28 @@ function Teacher() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-              <img src={Leader} alt="teacher" className="t1"/>
+          {
+            info && info.map((item, index) => (
+              <SwiperSlide>
+              <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
+                <div className="teacherItem">
+                <img src={item.img} alt="teacher" className="t1"/>
+                  
+                  <div className="teacherInfo">
+                    <h2 className="leaderName teacherName">
+                    {item.lastName}
+                    </h2>
+                    <h3 className="teacherPosition">
+                    {t('teacher.teacherPosition')}
+                    </h3>
+                    <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
+                  </div>
+                </div>
                 
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
-                </div>
               </div>
-              
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-              <img src={Leader} alt="teacher" className="t1"/>
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                    {t('teacher.teacherName1')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear2')}</h4>
-                </div>
-              </div>
-              
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-              <img src={Leader} alt="teacher" className="t1"/>
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName3')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition1')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
-                </div>
-              </div>
-              
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-              <img src={Leader} alt="teacher" className="t1"/>
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName4')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition2')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-              <img src={Leader} alt="teacher" className="t1"/>
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName5')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition2')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-                <img src={Leader} alt="teacher" />
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName2')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition3')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear2')}</h4>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-              <div className="teacherItem">
-                <img src={Leader} alt="teacher" />
-                <div className="teacherInfo">
-                  <h2 className="leaderName teacherName">
-                  {t('teacher.teacherName1')}
-                  </h2>
-                  <h3 className="teacherPosition">
-                  {t('teacher.teacherPosition')}
-                  </h3>
-                  <h4 className="teacherExperience">{t('teacher.teacherYear2')}</h4>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          
+            </SwiperSlide>
+            ))
+          }
         </Swiper>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Main from "../src/components/main/Main"
@@ -17,6 +17,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Loading from './components/loading/Loading';
 
 
 const router = createBrowserRouter([
@@ -70,7 +71,9 @@ i18n
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Suspense fallback={<Loading />}>
     <RouterProvider router={router} />
+      </Suspense>
   </React.StrictMode>
 );
 

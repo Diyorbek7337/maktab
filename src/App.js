@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
         <Navbar changeLan={changeLan}/>
-        <main>
-          <Outlet/>
+        <main> 
+          <Outlet />
         </main>
         <Useful/>
         <Footer/>

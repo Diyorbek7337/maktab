@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Tadbir from "../../image/tadbir.jpg";
 import "./news.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +11,15 @@ import { useTranslation } from "react-i18next";
 
 function News() {
   const { t } = useTranslation();
+  const [info, setInfo] = useState();
+
+  useEffect(() => {
+    fetch("https://3-maktab-back-production.up.railway.app/new")
+      .then((res) => res.json())
+      .then((data) => setInfo(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
+  // console.log(info);
   return (
     <div className="news" id="news" data-aos="fade-up">
       <div className="newsBox">
@@ -54,157 +63,28 @@ function News() {
             className="mySwiper newsSwiper"
           >
            
-            <SwiperSlide>
+          {
+            info && info.map((item, index) => (
+              <SwiperSlide>
               <div className="tadbirItem">
                 <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
+                  <img src={item.img[0]} alt="tadbir" />
                 </div>
                 <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
+                  <h2 className="tadbirName">{item.title}</h2>
                   <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
+                  <p className="date">{item.date}</p>
                   <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                  <div className="batafsilWindow">
-                    
-                  </div>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
+                    {item.description}
                   </p>
                   <a href="#" className="batafsil">
                   {t('news.newsMore')}
                   </a>
                 </div>
               </div>
-              
-              
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="tadbirItem">
-                <div className="tadbirImg">
-                  <img src={Tadbir} alt="tadbir" />
-                </div>
-                <div className="newInfo">
-                  <h2 className="tadbirName">«G'uncha» oromgohi</h2>
-                  <span className="solid"></span>
-                  <p className="date">22.06.2022</p>
-                  <p className="tadbirInfo">
-                    Sho'rchi tumani 1 - sonli maktabda tashkil etilgan «G'uncha»
-                    oromgohi faoliyatidan lavhalar.
-                  </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
-                </div>
-              </div>
-              
-              
-            </SwiperSlide>
-           
+            ))
+          }
           </Swiper>
         </div>
       </div>

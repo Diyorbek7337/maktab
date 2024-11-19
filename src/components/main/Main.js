@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Rasm1 from "../../image/rasm1.jpg";
 import Rasm2 from "../../image/rasm2.jpg";
 import "./main.css";
@@ -12,6 +12,18 @@ import About from "../about/About";
 import News from "../news/News";
 import Statistics from "../statistics/Statistics"
 function Main() {
+
+  const [info, setInfo] = useState();
+
+  useEffect(() => {
+    fetch("https://3-maktab-back-production.up.railway.app/info")
+      .then((res) => res.json())
+      .then((data) => setInfo(data[0].slider))
+      .catch((error) => console.error("Error:", error));
+  }, []);
+  // console.log(info);
+
+
   return (
     <div className="main" id="main">
       <Swiper
@@ -28,18 +40,16 @@ function Main() {
         modules={[EffectFade, Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src={Rasm1} alt="Rasm1" className="image1" />
-          {/* <h2 className="swiperTitle">1-Sonli Umumiy O'rta ta'lim maktabiga xush kelibsiz</h2> */}
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Rasm2} alt="Rasm2" className="image1" />
-          {/* <h2 className="swiperTitle">1-Sonli Umumiy O'rta ta'lim maktabiga xush kelibsiz</h2> */}
-        </SwiperSlide>
+        {info && info.img.map((item, index) => (
+          <SwiperSlide key={index}>
+            <img src={item} alt="Rasm1" className="image1" />
+            {/* <h2 className="swiperTitle">1-Sonli Umumiy O'rta ta'lim maktabiga xush kelibsiz</h2> */}
+          </SwiperSlide>
+        ))}
       </Swiper>
-      <About/>
-      <News/>
-      <Statistics/>
+      <About />
+      <News />
+      <Statistics />
     </div>
   );
 }

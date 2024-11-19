@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./statistics.css"
 import { useTranslation } from "react-i18next";
 import {FaUser} from 'react-icons/fa'
@@ -9,6 +9,15 @@ import {FaGraduationCap} from 'react-icons/fa'
 
 
 function Statistics() {
+    const [info, setInfo] = useState();
+
+    useEffect(() => {
+      fetch("https://3-maktab-back-production.up.railway.app/info")
+        .then((res) => res.json())
+        .then((data) => setInfo(data[0].statistics))
+        .catch((error) => console.error("Error:", error));
+    }, []);
+    // console.log(info);
 
     const { t } = useTranslation();
   return (
@@ -23,7 +32,7 @@ function Statistics() {
                     <div className='statistic-icon'>
                         <FaUser/>
                     </div>
-                    <div className='counter'><CountUp end={82}/></div>
+                    <div className='counter'><CountUp end={info && info.teachers}/></div>
                     <div className='statisticInfo'>
                     {t('statistics.statisticsInfo1')}
                     </div>
@@ -32,7 +41,7 @@ function Statistics() {
                     <div className='statistic-icon'>
                         <FaGraduationCap/>
                     </div>
-                    <div className='counter'><CountUp end={1337}  /></div>
+                    <div className='counter'><CountUp end={info && info.students}  /></div>
                     <div className='statisticInfo'>
                     {t('statistics.statisticsInfo2')}
                     </div>
@@ -41,7 +50,7 @@ function Statistics() {
                     <div className='statistic-icon'>
                         <FaKey/>
                     </div>
-                    <div className='counter'><CountUp end={50}  /></div>
+                    <div className='counter'><CountUp end={info && info.classes}  /></div>
                     <div className='statisticInfo'>
                     {t('statistics.statisticsInfo3')}
                     </div>
@@ -50,7 +59,7 @@ function Statistics() {
                     <div className='statistic-icon'>
                         <FaPaintBrush/>
                     </div>
-                    <div className='counter'><CountUp end={98}/></div>
+                    <div className='counter'><CountUp end={info && info.subjects}/></div>
                     <div className='statisticInfo'>
                     {t('statistics.statisticsInfo4')}
                     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './footer.css'
 import {MdNavigateNext} from 'react-icons/md'
 import { useTranslation } from "react-i18next";
@@ -13,6 +13,15 @@ function Footer() {
         })
     }
     const { t } = useTranslation();
+    const [info, setInfo] = useState();
+
+    useEffect(() => {
+      fetch("https://3-maktab-back-production.up.railway.app/info")
+        .then((res) => res.json())
+        .then((data) => setInfo(data[0].contacts))
+        .catch((error) => console.error("Error:", error));
+    }, []);
+    // console.log(info);
 
     return (
         <>
@@ -39,10 +48,10 @@ function Footer() {
                     <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
                         <h1 className='FooterTitle'>{t('footer.navigate3')}</h1>
                         <div className='footerInfo'>
-                            <p><b>{t('footer.manzil')}:</b> {t('footer.manziltitle')}</p>
-                            <p><b>{t('leader.phone')}</b> +99890 5229930</p>
-                            <p><b>{t('footer.email')}:</b> info@1-maktab.uz</p>
-                            <p><b>{t('footer.faks')}:</b> +99890 5229930</p>
+                            <p><b>{t('footer.manzil')}:</b> {info && info.address}</p>
+                            <p><b>{t('leader.phone')}</b> {info && info.phone}</p>
+                            <p><b>{t('footer.email')}:</b> {info && info.email}</p>
+                            <p><b>{t('footer.faks')}:</b> {info&& info.faks}</p>
                         </div>
                     </div>
                     <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
