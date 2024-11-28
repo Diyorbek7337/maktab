@@ -72,7 +72,7 @@ function Teacher() {
                   
                   <div className="teacherInfo">
                     <h2 className="leaderName teacherName">
-                    {item.lastName}
+                    {item.lastName} {item.firstName}
                     </h2>
                     <h3 className="teacherPosition">
                     {t('teacher.teacherPosition')}

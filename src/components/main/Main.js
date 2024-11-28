@@ -28,6 +28,7 @@ function Main() {
     <div className="main" id="main">
       <Swiper
         spaceBetween={30}
+        autoHeight={true}
         effect={"fade"}
         navigation={true}
         touchEventsTarget={'container'}
