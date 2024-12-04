@@ -2,9 +2,11 @@ import React from 'react'
 import './Loading.css'
 
 function Loading() {
+
+  console.log('loading');
   return (
     <div className='loading'>
-        <div class="loader"></div>
+        <div className="loader"></div>
     </div>
   )
 }
