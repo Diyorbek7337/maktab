@@ -65,24 +65,16 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-<<<<<<< HEAD
-        element: <Contact/>
-      },
-      {
-        path: "fullnew/:id",
-        element: <FullNew />
-      },
-=======
         element: (
           <Suspense fallback={<Loading />}>
             <Contact />
           </Suspense>
         )
       }
->>>>>>> 1b81c9a1be6f47a5a20a24c450b3273fc06ebddd
     ]
   }
 ]);
+
 
 i18n
   .use(initReactI18next) 
