@@ -12,7 +12,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Loading from './components/loading/Loading';
-import FullNew from './components/fullNew/FullNew';
 
 
 const Main = lazy(() => import("../src/components/main/Main"));
@@ -21,6 +20,7 @@ const About = lazy(() => import("./components/about/About"));
 const Leader = lazy(() => import("./components/leadership/Leadership"));
 const Teacher = lazy(() => import("./components/teachers/Teacher"));
 const Contact = lazy(() => import("./components/contact/Contact"));
+const FullNew = lazy(() => import("./components/fullNew/FullNew"))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,21 +65,20 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-<<<<<<< HEAD
-        element: <Contact/>
-      },
-      {
-        path: "fullnew/:id",
-        element: <FullNew />
-      },
-=======
         element: (
           <Suspense fallback={<Loading />}>
             <Contact />
           </Suspense>
         )
+      },
+      {
+        path: "fullnew/:id",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <FullNew />
+          </Suspense>
+        )
       }
->>>>>>> 1b81c9a1be6f47a5a20a24c450b3273fc06ebddd
     ]
   }
 ]);
@@ -115,4 +114,3 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-
