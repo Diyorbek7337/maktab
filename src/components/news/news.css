@@ -88,10 +88,12 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    height: 200px
 }
 .tadbirItem img {
     width: 100%;
     margin: 0 auto;
+    height: 100%;
     transition: all ease 0.5s;
 }
 .tadbirItem:hover img {

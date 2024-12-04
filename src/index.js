@@ -1,12 +1,6 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from "../src/components/main/Main"
-import News from "./components/news/News"
-import About from "./components/about/About";
-import Leader from "./components/leadership/Leadership"
-import Teacher from "./components/teachers/Teacher"
-import Contact from "./components/contact/Contact"
 import App from './App';
 import Errorpage from './components/ErrorPage/Errorpage';
 import i18n from "i18next";
@@ -20,36 +14,64 @@ import {
 import Loading from './components/loading/Loading';
 
 
+const Main = lazy(() => import("../src/components/main/Main"));
+const News = lazy(() => import("./components/news/News"));
+const About = lazy(() => import("./components/about/About"));
+const Leader = lazy(() => import("./components/leadership/Leadership"));
+const Teacher = lazy(() => import("./components/teachers/Teacher"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <Errorpage/>,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <App />
+      </Suspense>
+    ),
+    errorElement: <Errorpage />,
     children: [
       {
         path: "",
-        element: <Main/>
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Main />
+          </Suspense>
+        )
       },
       {
         path: "news",
-        element: <News/>
+        element: (
+          <Suspense fallback={<Loading />}>
+            <News />
+          </Suspense>
+        )
       },
       {
         path: "leader",
-        element: <Leader/>
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Leader />
+          </Suspense>
+        )
       },
       {
         path: "teacher",
-        element: <Teacher/>
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Teacher />
+          </Suspense>
+        )
       },
       {
         path: "contact",
-        element: <Contact/>
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        )
       }
-      
     ]
   }
- 
 ]);
 
 i18n
@@ -65,7 +87,10 @@ i18n
     },
     backend: {
       loadPath: '/assets/locales/{{lng}}/translation.json',
-    },  
+    }, 
+    react: {
+      useSuspense: true // Suspense qo‘llab-quvvatlanishini ta'minlash
+    } 
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
