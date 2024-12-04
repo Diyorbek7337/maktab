@@ -1,0 +1,13 @@
+.full-new {
+    text-align: center;
+
+}
+/* .full-new-img-container img {
+    height: 90vh;
+} */
+.full-new-img-container .mySwiper {
+    width: 60%;
+}
+.swiper {
+    padding: 0 !important;
+}

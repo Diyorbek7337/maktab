@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 
 function News() {
@@ -77,9 +78,9 @@ function News() {
                   <p className="tadbirInfo">
                     {item.description}
                   </p>
-                  <a href="#" className="batafsil">
-                  {t('news.newsMore')}
-                  </a>
+                  <Link to={`fullnew/${item._id}`} className="batafsil">
+                  Batafsil
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

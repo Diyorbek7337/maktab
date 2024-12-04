@@ -18,6 +18,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Loading from './components/loading/Loading';
+import FullNew from './components/fullNew/FullNew';
 
 
 const router = createBrowserRouter([
@@ -45,8 +46,11 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact/>
-      }
-      
+      },
+      {
+        path: "fullnew/:id",
+        element: <FullNew />
+      },
     ]
   }
  
