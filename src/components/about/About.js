@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import "./about.css"
-import Maktab from "../../image/1-maktab.jpg"
 import { useTranslation } from "react-i18next";
 
 
