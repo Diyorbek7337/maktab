@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import Logo from "../../image/logo.jpg";
 import { useTranslation } from "react-i18next";
-import Uzb from './../../image/uzb.png'
-import Rus from './../../image/rus3-removebg-preview.png'
-import UK from './../../image/Uk.png'
 // import jsCookie from 'js-cookie';
 import { NavLink } from "react-router-dom";
 
 function Navbar({ changeLan }) {
   // const lang = jsCookie.get("i18next")
-  const [languagesMenu, setLanguagesMenu] = useState(false);
+  // const [languagesMenu, setLanguagesMenu] = useState(false);
   const { t } = useTranslation();
   const [toggle, setToggle] = useState(true);
   // const [imgSrc, setImgSrc] = useState();

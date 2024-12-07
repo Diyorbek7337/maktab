@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Rasm1 from "../../image/rasm1.jpg";
-import Rasm2 from "../../image/rasm2.jpg";
 import "./main.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
