@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./teacher.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -21,7 +21,10 @@ function Teacher() {
   useEffect(() => {
     fetch("https://3-maktab-back-production.up.railway.app/teacher")
       .then((res) => res.json())
-      .then((data) => setInfo(data))
+      .then((data) => {
+        setInfo(data)
+        window.scrollTo(0, 0);
+      })
       .catch((error) => console.error("Error:", error));
   }, []);
   return (
@@ -37,52 +40,52 @@ function Teacher() {
           style={{
             "--swiper-pagination-bullet-inactive-opacity": "1",
           }}
-          
+
           slidesPerView={3}
           spaceBetween={30}
-          
+
           grabCursor={true}
           touchEventsTarget={"container"}
           pagination={{
             clickable: true,
           }}
           breakpoints={{
-          280: {
-            slidesPerView: 1,
-            
-          },
-          600: {
-            slidesPerView: 2,
-           
-          },
-          768: {
-            slidesPerView: 3,
-            
-          },
-        }}
+            280: {
+              slidesPerView: 1,
+
+            },
+            600: {
+              slidesPerView: 2,
+
+            },
+            768: {
+              slidesPerView: 3,
+
+            },
+          }}
           modules={[Pagination]}
           className="mySwiper"
         >
           {
             info && info.map((item, index) => (
               <SwiperSlide>
-              <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
-                <div className="teacherItem">
-                <img src={item.img} alt="teacher" className="t1"/>
-                  
-                  <div className="teacherInfo">
-                    <h2 className="leaderName teacherName">
-                    {item.lastName} {item.firstName}
-                    </h2>
-                    <h3 className="teacherPosition">
-                    {t('teacher.teacherPosition')}
-                    </h3>
-                    <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
+                <div className="teacherItems" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
+                  <div className="teacherItem">
+                    <img src={item.img} alt="teacher" className="t1" />
+
+                    <div className="teacherInfo">
+                      <h2 className="leaderName teacherName">
+                        {item.lastName} {item.firstName}
+                      </h2>
+                      <h3 className="teacherPosition">
+                        {t('teacher.teacherPosition')}
+                      </h3>
+                      <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
+                    </div>
                   </div>
+
                 </div>
-                
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
             ))
           }
         </Swiper>

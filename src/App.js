@@ -11,12 +11,12 @@ function App() {
   }
   return (
     <div className="App">
-        <Navbar changeLan={changeLan}/>
-        <main> 
-          <Outlet />
-        </main>
-        <Useful/>
-        <Footer/>
+      <Navbar changeLan={changeLan} />
+      <main>
+        <Outlet />
+      </main>
+      <Useful />
+      <Footer />
     </div>
   );
 }

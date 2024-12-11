@@ -16,7 +16,10 @@ function Main() {
   useEffect(() => {
     fetch("https://3-maktab-back-production.up.railway.app/info")
       .then((res) => res.json())
-      .then((data) => setInfo(data[0].slider))
+      .then((data) => {
+        setInfo(data[0].slider)
+        window.scrollTo(0, 0);
+      })
       .catch((error) => console.error("Error:", error));
   }, []);
   // console.log(info);
@@ -25,7 +28,7 @@ function Main() {
   return (
     <div className="main" id="main">
       <Swiper
-      autoHeight={true}
+        autoHeight={true}
         spaceBetween={30}
         effect={"fade"}
         navigation={true}
