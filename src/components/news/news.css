@@ -72,13 +72,14 @@
 .tadbirItem {
     text-align: center;
     padding: 20px;
-    display: inline-block;
     border-radius: 10px;
-    margin: 40px 20px 0 20px;
+    margin: 40px 20px 0 5px;
     box-sizing: border-box;
     border: none;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     cursor: pointer;
+    width: 100%;
+    min-height: 550px;
 }
 .newItem:nth-child(3) {
     margin-right: 0;
@@ -88,7 +89,14 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    height: 200px
+    height: 200px;
+    object-fit: cover;
+}
+.newInfo {
+    text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 }
 .tadbirItem img {
     width: 100%;
@@ -110,6 +118,7 @@
 }
 .solid {
     display: inline-block;
+    align-self: center;
     text-align: center;
     width: 50px;
     height: 2px;
@@ -131,14 +140,18 @@
     font-family: 'Lato', 'sans-serif';
     margin-bottom: 35px;
 }
+
 .batafsil {
     padding: 8px 15px;
     color: #fff;
     background-color: #004A8D;
     border: none;
+    text-align:center;
     border-radius: 4px;
+    width:20%;
     font-family: 'Lato', 'sans-serif';
     transition: all ease 0.5s;
+    align-self: center;
 }
 .batafsil:hover {
     padding: 12px 24px;

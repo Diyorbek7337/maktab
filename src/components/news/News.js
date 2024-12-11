@@ -38,7 +38,7 @@ function News() {
             
             }}
             slidesPerView={3}
-            // spaceBetween={30}
+            spaceBetween={30}
             grabCursor={true}
             touchEventsTarget={"container"}
             
