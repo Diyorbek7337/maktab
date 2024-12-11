@@ -1,21 +1,49 @@
 .full-new {
   text-align: center;
+  width: 80%;
+}
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.full-new p {
+  font-size: 20px;
+  text-align: start;
 }
 .swiper {
   padding: 0 !important;
 }
 .full-new-img-container {
-  margin: 0 auto;
-  width: 90%;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2%;
   row-gap: 30px;
   display: flex;
+  /* font-family: sans-serif; */
+}
+.pt-serif {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .full-new-img {
   width: 49%;
 }
 .full-new-img-container img {
   width: 100%;
+}
+.full-new-container {
+  margin: 0 auto;
+  width: 85%;
+  gap: 20px;
+  display: flex;
+}
+.news-sidebar {
+  width: 20%;
+  border: 1px solid gray;
+  padding: 0 20px;
+}
+.news-sidebar img {
+  width: 100%;
+}
+.news-sidebar-item {
+  border-bottom: 2px solid black;
+  margin-top: 10px;
 }
