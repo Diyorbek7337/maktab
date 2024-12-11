@@ -7,7 +7,10 @@ function Leadership() {
     useEffect(() => {
         fetch("https://3-maktab-back-production.up.railway.app/leadership")
             .then((res) => res.json())
-            .then((data) => setInfo(data))
+            .then((data) => {
+                setInfo(data)
+                window.scrollTo(0, 0);
+            })
             .catch((error) => console.error("Error:", error));
     }, []);
     const { t } = useTranslation();
