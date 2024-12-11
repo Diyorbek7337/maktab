@@ -83,6 +83,7 @@ const router = createBrowserRouter([
   }
 ]);
 
+
 i18n
   .use(initReactI18next) 
   .use(LanguageDetector)
