@@ -16,7 +16,7 @@ import Loading from './components/loading/Loading';
 
 const Main = lazy(() => import("../src/components/main/Main"));
 const News = lazy(() => import("./components/news/News"));
-const About = lazy(() => import("./components/about/About"));
+// const About = lazy(() => import("./components/about/About"));
 const Leader = lazy(() => import("./components/leadership/Leadership"));
 const Teacher = lazy(() => import("./components/teachers/Teacher"));
 const Contact = lazy(() => import("./components/contact/Contact"));
