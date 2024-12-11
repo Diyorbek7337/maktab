@@ -2,30 +2,22 @@ import React, { useState } from "react";
 import "./navbar.css";
 import Logo from "../../image/logo.jpg";
 import { useTranslation } from "react-i18next";
-// import jsCookie from 'js-cookie';
+
 import { NavLink } from "react-router-dom";
 
 function Navbar({ changeLan }) {
-  // const lang = jsCookie.get("i18next")
-  // const [languagesMenu, setLanguagesMenu] = useState(false);
+
   const { t } = useTranslation();
   const [toggle, setToggle] = useState(true);
-  // const [imgSrc, setImgSrc] = useState();
-  // useEffect(() => {
-  //   if (lang === "Uz") {
-  //     setImgSrc(Uzb);
-  //   } else if (lang === "Ru") {
-  //     setImgSrc(Rus);
-  //   } else {
-  //     setImgSrc(UK);
-  //   }
-  // }, [lang]);
+
   return (
     <div className="navbar">
       <div className="navBox">
         <h1 className="schoolName">
-          <img src={Logo} alt="Logo" />
-          3-son Kasb-hunar maktab
+          <a href="https://shurchi3politexnikum.uz" className="schoolName">
+            <img src={Logo} alt="Logo" />
+            Sho'rchi Politexnika Texnikumi
+          </a>
         </h1>
         <ul className="navItems">
           <li className="navItem">
@@ -43,7 +35,7 @@ function Navbar({ changeLan }) {
           <li className="navItem">
             <NavLink to="contact">{t("nav.contact")}</NavLink>
           </li>
-          
+
         </ul>
         <div className="menuIcon" onClick={() => setToggle(!toggle)}>
           <div className={toggle ? "bar1" : "bar1 change"}></div>

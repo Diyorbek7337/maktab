@@ -23,6 +23,9 @@
   align-items: center;
   cursor: pointer;
   color: rgb(15, 13, 25);
+  font-size: 30px;
+  letter-spacing: 0.5px;
+
 }
 .schoolName img {
   width: 45px;
