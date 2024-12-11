@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./FullNew.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation, Autoplay } from "swiper";
+import NewsSidebar from "./NewsSidebar";
+import { IoCalendar } from "react-icons/io5";
 
 function FullNew() {
   const { id } = useParams();
@@ -18,9 +18,12 @@ function FullNew() {
   }, [id]);
 
   return (
-    <>
+    <div className="full-new-container">
       {news && (
         <div className="full-new">
+          <h3>
+            <IoCalendar />: <b>{news?.date}</b>
+          </h3>
           <div className="full-new-img-container">
             {news?.img.map((item) => (
               <div className="full-new-img">
@@ -28,13 +31,13 @@ function FullNew() {
               </div>
             ))}
           </div>
-          <h1>{news?.title}</h1>
-          <p>{news?.description}</p>
-          <p>Date: {news?.date}</p>
-          <p>Category: {news?.text}</p>
+          <h1 className="pt-serif">{news?.title}</h1>
+          <p className="pt-serif">{news?.description}</p>
+          <p className="pt-serif">Category: {news?.text}</p>
         </div>
       )}
-    </>
+      <NewsSidebar />
+    </div>
   );
 }
 
