@@ -44,7 +44,9 @@ function Main() {
       >
         {info && info.img.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item} alt="Rasm1" className="image1" />
+            <div className="swiperBoxImage">
+                <img src={item} alt="Rasm1" className="image1" />
+            </div>
             {/* <h2 className="swiperTitle">1-Sonli Umumiy O'rta ta'lim maktabiga xush kelibsiz</h2> */}
           </SwiperSlide>
         ))}
