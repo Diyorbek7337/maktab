@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { IoCalendar } from "react-icons/io5";
 
 function NewsSidebar() {
@@ -13,13 +14,23 @@ function NewsSidebar() {
     <div className="news-sidebar">
       <h3>So'ngi yangiliklar</h3>
       {info &&
-        info.map((item) => (
-          <div key={item.id} className="news-sidebar-item">
-            <div className="news-sidebar-img">
+        info.map((item, index) => (
+          <Link
+            key={index}
+            to={`/fullnew/${item._id}`}
+            className="news-sidebar-item"
+          >
+            <div className="news-sidebar-img border-radius-img">
               <img src={item.img[0]} alt="img" />
             </div>
-            <h4 className="pt-serif">{item.title}</h4>
-          </div>
+
+            <div>
+              <h4 className="pt-serif">{item.title}</h4>
+              <span className="fullnew-date">
+                <IoCalendar />:{item.date}
+              </span>
+            </div>
+          </Link>
         ))}
     </div>
   );

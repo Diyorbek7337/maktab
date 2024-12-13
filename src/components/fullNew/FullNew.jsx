@@ -21,12 +21,12 @@ function FullNew() {
     <div className="full-new-container">
       {news && (
         <div className="full-new">
-          <h3>
+          <h3 className="fullnew-date">
             <IoCalendar />: <b>{news?.date}</b>
           </h3>
           <div className="full-new-img-container">
             {news?.img.map((item) => (
-              <div className="full-new-img">
+              <div className="full-new-img border-radius-img">
                 <img src={item} alt="img" />
               </div>
             ))}
