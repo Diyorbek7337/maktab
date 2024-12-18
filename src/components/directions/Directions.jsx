@@ -7,9 +7,7 @@ function Directions() {
     fetch(`https://3-maktab-back-production.up.railway.app/direction`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-
-        setData(data);
+        setData(data.reverse());
         window.scrollTo(0, 0);
       })
       .catch((err) => console.log(err));
