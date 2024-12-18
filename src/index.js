@@ -1,4 +1,4 @@
-import React, {Suspense, lazy} from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -21,6 +21,7 @@ const Leader = lazy(() => import("./components/leadership/Leadership"));
 const Teacher = lazy(() => import("./components/teachers/Teacher"));
 const Contact = lazy(() => import("./components/contact/Contact"));
 const FullNew = lazy(() => import("./components/fullNew/FullNew"))
+const Directions = lazy(() => import("./components/directions/Directions"))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +73,14 @@ const router = createBrowserRouter([
         )
       },
       {
+        path: "directions",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Directions />
+          </Suspense>
+        )
+      },
+      {
         path: "fullnew/:id",
         element: (
           <Suspense fallback={<Loading />}>
@@ -85,7 +94,7 @@ const router = createBrowserRouter([
 
 
 i18n
-  .use(initReactI18next) 
+  .use(initReactI18next)
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
@@ -97,18 +106,18 @@ i18n
     },
     backend: {
       loadPath: '/assets/locales/{{lng}}/translation.json',
-    }, 
+    },
     react: {
       useSuspense: true // Suspense qo‘llab-quvvatlanishini ta'minlash
-    } 
-});
+    }
+  });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
-    <RouterProvider router={router} />
-      </Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
   </React.StrictMode>
 );
 

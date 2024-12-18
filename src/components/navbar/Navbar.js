@@ -24,7 +24,7 @@ function Navbar({ changeLan }) {
             <NavLink to="">{t("nav.main")}</NavLink>
           </li>
           <li className="navItem">
-            <NavLink to="">Yo'nalishlar</NavLink>
+            <NavLink to="directions">Yo'nalishlar</NavLink>
           </li>
           <li className="navItem">
             <NavLink to="leader">{t("nav.leader")}</NavLink>
