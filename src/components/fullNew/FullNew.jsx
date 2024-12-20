@@ -8,7 +8,7 @@ function FullNew() {
   const { id } = useParams();
   const [news, setNews] = useState(false);
   useEffect(() => {
-    fetch(`https://3-maktab-back-production.up.railway.app/new/${id}`)
+    fetch(`https://admin-panel-production-abfb.up.railway.app/new/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setNews(data);

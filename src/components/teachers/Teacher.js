@@ -19,7 +19,7 @@ function Teacher() {
   const [info, setInfo] = useState();
 
   useEffect(() => {
-    fetch("https://3-maktab-back-production.up.railway.app/teacher")
+    fetch("https://admin-panel-production-abfb.up.railway.app/teacher")
       .then((res) => res.json())
       .then((data) => {
         setInfo(data)

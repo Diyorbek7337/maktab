@@ -4,7 +4,7 @@ import "./directions.css";
 function Directions() {
   const [data, setData] = useState(false);
   useEffect(() => {
-    fetch(`https://3-maktab-back-production.up.railway.app/direction`)
+    fetch(`https://admin-panel-production-abfb.up.railway.app/direction`)
       .then((res) => res.json())
       .then((data) => {
         setData(data.reverse());

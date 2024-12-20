@@ -12,7 +12,7 @@
 .directions-item-back {
   margin-top: 50px;
   border-radius: 30px;
-  background-color: rgb(27, 107, 80);
+  background-color: #004a8d;
   padding: 15px;
 }
 .directions-item img {
@@ -21,7 +21,7 @@
   align-items: center;
 }
 .directions-img {
-  border: 3px solid rgb(0, 71, 0);
+  border: 3px solid #0084ff;
   border-radius: 10px;
   overflow: hidden;
 }

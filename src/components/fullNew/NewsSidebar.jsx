@@ -5,9 +5,9 @@ import { IoCalendar } from "react-icons/io5";
 function NewsSidebar() {
   const [info, setInfo] = useState([]);
   useEffect(() => {
-    fetch("https://3-maktab-back-production.up.railway.app/new")
+    fetch("https://admin-panel-production-abfb.up.railway.app/new")
       .then((res) => res.json())
-      .then((data) => setInfo(data))
+      .then((data) => setInfo(data.reverse()))
       .catch((error) => console.error("Error:", error));
   }, []);
   return (

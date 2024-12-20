@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 function Leadership() {
     const [info, setInfo] = useState();
     useEffect(() => {
-        fetch("https://3-maktab-back-production.up.railway.app/leadership")
+        fetch("https://admin-panel-production-abfb.up.railway.app/leadership")
             .then((res) => res.json())
             .then((data) => {
                 setInfo(data)

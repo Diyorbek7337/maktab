@@ -14,7 +14,7 @@ function Main() {
   const [info, setInfo] = useState();
 
   useEffect(() => {
-    fetch("https://3-maktab-back-production.up.railway.app/info")
+    fetch("https://admin-panel-production-abfb.up.railway.app/info")
       .then((res) => res.json())
       .then((data) => {
         setInfo(data[0].slider)
@@ -45,7 +45,7 @@ function Main() {
         {info && info.img.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="swiperBoxImage">
-                <img src={item} alt="Rasm1" className="image1" />
+              <img src={item} alt="Rasm1" className="image1" />
             </div>
             {/* <h2 className="swiperTitle">1-Sonli Umumiy O'rta ta'lim maktabiga xush kelibsiz</h2> */}
           </SwiperSlide>
