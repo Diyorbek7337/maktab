@@ -57,7 +57,7 @@ function Footer() {
                         <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
                             <h1 className='FooterTitle'>{t('footer.navigate4')}</h1>
                             <div className='map'>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2271.945441783783!2d67.79317743000274!3d37.99654907661317!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b56943be7db889%3A0x126b52f2df896529!2s1.Maktab!5e0!3m2!1sru!2s!4v1674062600546!5m2!1sru!2s" width="100" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d6354.8387102961!2d67.830022!3d37.985006!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDU5JzA2LjAiTiA2N8KwNDknNDguMSJF!5e1!3m2!1suz!2s!4v1734727752880!5m2!1suz!2s" width="100" height="300" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
