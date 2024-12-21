@@ -67,7 +67,7 @@ function Footer() {
             </div>
 
             <div className='footerContainer' >
-                <p>Copyright © 2023 - React by Diyorbek</p>
+                <p>Copyright © 2024 - React by Diyorbek</p>
             </div>
         </>
     )
