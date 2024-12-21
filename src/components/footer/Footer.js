@@ -3,6 +3,7 @@ import './footer.css'
 import { MdNavigateNext } from 'react-icons/md'
 import { useTranslation } from "react-i18next";
 import { FaChevronUp } from 'react-icons/fa';
+import { NavLink } from "react-router-dom";
 
 
 function Footer() {
@@ -38,11 +39,11 @@ function Footer() {
                         <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
                             <h1 className='FooterTitle'>{t('footer.navigate2')}</h1>
                             <ul className='footerNav'>
-                                <li className='footerNavItems'><MdNavigateNext className='next' /> <a href="#main">{t("nav.main")}</a></li>
-                                <li className='footerNavItems'><MdNavigateNext className='next' /> <a href="#main">{t("nav.about")}</a></li>
-                                <li className='footerNavItems'><MdNavigateNext className='next' /> <a href="#main">{t("nav.news")}</a></li>
-                                <li className='footerNavItems'><MdNavigateNext className='next' /> <a href="#main">{t("nav.leader")}</a></li>
-                                <li className='footerNavItems'><MdNavigateNext className='next' /> <a href="#main">{t("nav.contact")}</a></li>
+                                <li className='footerNavItems'><MdNavigateNext className='next' /> <NavLink to="">{t("nav.main")}</NavLink></li>
+                                <li className='footerNavItems'><MdNavigateNext className='next' /> <NavLink to="directions">Yo'nalishlar</NavLink></li>
+                                <li className='footerNavItems'><MdNavigateNext className='next' /> <NavLink to="leader">{t("nav.leader")}</NavLink></li>
+                                <li className='footerNavItems'><MdNavigateNext className='next' /> <NavLink to="teacher">{t("nav.teacher")}</NavLink></li>
+                                <li className='footerNavItems'><MdNavigateNext className='next' /> <NavLink to="contact">{t("nav.contact")}</NavLink></li>
                             </ul>
                         </div>
                         <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">

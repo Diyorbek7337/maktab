@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoCalendar } from "react-icons/io5";
+import "./FullNew.css";
 
 function NewsSidebar() {
   const [info, setInfo] = useState([]);
@@ -12,7 +13,7 @@ function NewsSidebar() {
   }, []);
   return (
     <div className="news-sidebar">
-      <h3>So'ngi yangiliklar</h3>
+      <h3 className="news-sidebar-title">So'nggi yangiliklar</h3>
       {info &&
         info.map((item, index) => (
           <Link

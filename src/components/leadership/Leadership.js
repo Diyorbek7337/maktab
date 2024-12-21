@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './leadership.css'
+import "../general.css"
 import { useTranslation } from "react-i18next";
 
 function Leadership() {
@@ -19,6 +20,9 @@ function Leadership() {
             <div className='leaderBox'>
                 <span className="bounce" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">{t('about.animateTitle')}</span>
                 <h2 className='leaderTitle' data-aos="fade-up" data-aos-duration="2000">{t('leader.leaderTitle')}</h2>
+                <span className="border" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up"></span>
+        <span className="kvadrat" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up"></span>
+        <span className="border" data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up"></span>   
                 <div className='leaderContainer'>
                     {info && info.map((item, index) => (
                         <div key={index} className='leaderItem' data-aos="flip-left" data-aos-duration="1200">

@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./teacher.css";
+import "../general.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-import Leader from "../../image/user.png";
-// import T1 from "../../image/t1.jpg"
-// import T2 from "../../image/t2.jpg"
-// import T3 from "../../image/t3.jpg"
-// import T4 from "../../image/t4.png"
-// import T5 from "../../image/t5.jpg"
+// import Leader from "../../image/user.png";
 import { useTranslation } from "react-i18next";
 
 
@@ -23,6 +19,7 @@ function Teacher() {
       .then((res) => res.json())
       .then((data) => {
         setInfo(data)
+        // console.log(data);
         window.scrollTo(0, 0);
       })
       .catch((error) => console.error("Error:", error));
@@ -78,9 +75,9 @@ function Teacher() {
                         {item.lastName} {item.firstName}
                       </h2>
                       <h3 className="teacherPosition">
-                        {t('teacher.teacherPosition')}
+                      {item.job}
                       </h3>
-                      <h4 className="teacherExperience">{t('teacher.teacherYear1')}</h4>
+                      <h4 className="teacherExperience">{item.experience}</h4>
                     </div>
                   </div>
 
