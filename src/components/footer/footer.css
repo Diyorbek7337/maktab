@@ -109,6 +109,9 @@ iframe {
      background-color: #004A8D;
      transition: 0.5s;   
 }
+.footerInfo a {
+    color: white;
+}
 @media (max-width: 992px) {
     .footerBox {
         width: 90%;

@@ -19,7 +19,7 @@ function Teacher() {
       .then((res) => res.json())
       .then((data) => {
         setInfo(data)
-        // console.log(data);
+        console.log(data);
         window.scrollTo(0, 0);
       })
       .catch((error) => console.error("Error:", error));
@@ -72,12 +72,12 @@ function Teacher() {
 
                     <div className="teacherInfo">
                       <h2 className="leaderName teacherName">
-                        {item.lastName} {item.firstName}
+                        {item.name}
                       </h2>
                       <h3 className="teacherPosition">
                       {item.job}
                       </h3>
-                      <h4 className="teacherExperience">{item.experience}</h4>
+                      <h4 className="teacherExperience">Tajribasi: {item.experience}</h4>
                     </div>
                   </div>
 

@@ -7,7 +7,7 @@
         "site": "Sayt test rejimida ishlamoqda"
     },
     "nav": {
-        "school": "1-Maktab",
+        "school": "3-Texnikum",
         "main": "Bosh Sahifa",
         "about": "Bizning Maktab",
         "news": "Yangiliklar",
@@ -16,8 +16,8 @@
         "teacher": "O'qituvchilar"
     },
     "about": {
-        "aboutTitle": "Bizning texnikumimiz haqida",
-        "animateTitle": "1-Maktab"
+        "aboutTitle": "Bizning Politexnikumimiz haqida",
+        "animateTitle": "3-son Politexnikumi"
     },
     "statistics": {
         "statisticsTitle": "Maktab statistikasi",
@@ -78,7 +78,7 @@
         "navigate2": "Navigatsiya",
         "navigate3": "Biz bilan Bog'laning",
         "navigate4": "Xaritadan ko'rish",
-        "subtitle": "Oliy ta'lim fan va innovatsiyalar vazirligi Surxondaryo viloyati Oliy ta'lim fan va innovatsiyalar hududiy boshqarmasiga qarashli 3-son Politexnikumi",
+        "subtitle": "Oliy ta'lim fan va innovatsiyalar vazirligi Surxondaryo viloyati Oliy ta'lim fan va innovatsiyalar hududiy boshqarmasiga qarashli Sho'rchi tumani 3-son Politexnikumi",
         "manzil": "Manzil",
         "manziltitle": "Surxondaryo viloyati Sho'rchi tumani X.Begmatov ko'chasi 48-uy",
         "email": "Email",

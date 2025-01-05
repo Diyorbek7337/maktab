@@ -16,7 +16,7 @@ function Navbar({ changeLan }) {
         <h1 className="schoolName">
           <a href="https://shurchi3politexnikum.uz" className="schoolName">
             <img src={Logo} alt="Logo" />
-            Sho'rchi Politexnika Texnikumi
+            Sho'rchi tuman 3-son Politexnikumi
           </a>
         </h1>
         <ul className="navItems">

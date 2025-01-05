@@ -23,7 +23,7 @@ function About() {
       <div className='aboutBox'>
         <div className='aboutBoxInfo' data-aos="fade-right" data-aos-duration="600" data-aos-offset="300"
           data-aos-easing="ease-in-sine">
-          <h1 className='school-name'>{info && info.name}</h1>
+          <h1 className='school-name'>Sho'rchi tuman 3-son Politexnikumi</h1>
           <p className='schoolAbout'>{info && info.description}</p>
         </div>
         <div className='aboutBoxImg' data-aos="fade-left" data-aos-duration="600" data-aos-offset="300"

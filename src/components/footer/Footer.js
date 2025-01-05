@@ -49,9 +49,9 @@ function Footer() {
                         <div className='footerItem' data-aos-duration="2000" data-aos-delay="300" data-aos="fade-up">
                             <h1 className='FooterTitle'>{t('footer.navigate3')}</h1>
                             <div className='footerInfo'>
-                                <p><b>{t('footer.manzil')}:</b> {info && info.address}</p>
-                                <p><b>{t('leader.phone')}</b> {info && info.phone}</p>
-                                <p><b>{t('footer.email')}:</b> {info && info.email}</p>
+                                <p><b>{t('footer.manzil')}:</b> Sho‘rchi Tumani, Oqqo‘rg‘on MFY,  Mustaqillik Ko‘chasi, 73-Uy</p>
+                                <p><b>{t('leader.phone')}</b> <a href='tel:+998762287554'>+998762287554</a></p>
+                                <p><b>{t('footer.email')}:</b> <a href='mailto:info@shurchi3politexnikum.uz'>info@shurchi3politexnikum.uz</a></p>
                                 <p><b>{t('footer.faks')}:</b> {info && info.faks}</p>
                             </div>
                         </div>
